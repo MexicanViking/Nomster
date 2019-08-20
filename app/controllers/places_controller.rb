@@ -10,7 +10,7 @@ class PlacesController < ApplicationController
 	end
 
 	def create
-    	current_user.places.create(place_params)
+    	@place = current_user.places.create(place_params)
     	redirect_to root_path
   	end
 
@@ -19,8 +19,9 @@ class PlacesController < ApplicationController
   	end
 
   	def edit
+  		@place = Place.find(params[:id])
   	end
-  	
+
   	private
 
   	def place_params

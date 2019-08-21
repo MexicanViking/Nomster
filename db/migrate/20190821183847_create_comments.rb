@@ -12,4 +12,4 @@ class CreateComments < ActiveRecord::Migration[5.2]
     add_index :comments, :place_id
     end
   end
-end
+

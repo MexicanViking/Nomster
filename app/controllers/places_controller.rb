@@ -21,6 +21,7 @@ class PlacesController < ApplicationController
   	def show
   		@place = Place.find(params[:id])
       @comment = Comment.new
+      @photo = Photo.new
   	end
 
   	def edit
@@ -52,7 +53,7 @@ class PlacesController < ApplicationController
 
   		@place.destroy
   		redirect_to root_path
-	end
+	  end
 
   	private
 

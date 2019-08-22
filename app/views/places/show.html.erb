@@ -89,8 +89,8 @@
   <br />
   <% @place.photos.each do |photo| %>
     <div class = "col-xs-12 col-sm-6">
-      <% if photo.Picture.present? %>
-        <%= image_tag(photo.Picture, width:"100%") %><br/><br/>
+      <% if photo.picture.present? %>
+        <%= image_tag(photo.picture.url, width:"100%") %><br/><br/>
         <%= photo.caption %><br />
       <% end %>
     </div>

@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2019_08_22_122809) do
     t.datetime "updated_at", null: false
     t.string "Picture"
     t.string "picture"
+    t.index ["user_id"], name: "index_photos_on_user_id"
   end
 
   create_table "places", force: :cascade do |t|

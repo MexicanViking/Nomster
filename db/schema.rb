@@ -15,11 +15,6 @@ ActiveRecord::Schema.define(version: 2019_08_22_122809) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "add_picture_to_photos", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "comments", force: :cascade do |t|
     t.text "message"
     t.string "rating"
@@ -36,9 +31,8 @@ ActiveRecord::Schema.define(version: 2019_08_22_122809) do
     t.integer "place_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "Picture"
     t.string "picture"
-    t.index ["user_id"], name: "index_photos_on_user_id"
+    t.index ["place_id"], name: "index_photos_on_place_id"
   end
 
   create_table "places", force: :cascade do |t|
